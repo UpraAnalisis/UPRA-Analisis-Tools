@@ -24,7 +24,7 @@ El proceso de instalación es el siguiente:
     %USERPROFILE%\Documents\ArcGIS\AddIns\
     ``` 
 
-![](https://upraanalisis.github.io/gifs/Descarga_multicortes_32.gif)
+![](https://github.com/UpraAnalisis/UpraAnalisis.github.io/blob/master/gifs/Descarga_multicortes_32.gif)
 
 Ingresar a la versión de arcgis en la que se quiera instalar el AddIn y pegar el archivo.
 
