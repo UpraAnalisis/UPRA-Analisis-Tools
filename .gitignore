@@ -1,0 +1,7 @@
+_site
+.sass-cache
+*.bat
+Gemfile.lock
+Thumbs.db
+*.pyc
+*.lnk
