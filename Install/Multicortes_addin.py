@@ -100,10 +100,10 @@ def creadirs(ruta_raiz,nombre): # crea los dierctorios de salida del programa
     return ruta_raiz+"\\%s"%nombre
 
 def listar_xls(path,lst):
-    for file in os.listdir(path):
+      for file in os.listdir(path):
         if file.endswith(".xls") or file.endswith(".xlsx"):
             lst.append(os.path.join(path, file))
-    return lst
+      return lst
 
 def fusion(path,nombre_capa):
     wkbk = xlwt.Workbook()
@@ -703,18 +703,7 @@ class ButtonMulticortes(object):
                             moldex=arcpy.Describe(molde).catalogpath.encode("utf8")
                             capax=arcpy.Describe(capa).catalogpath.encode("utf8")
                             print moldex,capax,rfinal.encode("utf8"),nombre_tabla.encode("utf8")
-##                            ruta_trabajo= r"X:\BORRAR"
-##                            text_file = open("%s//Log_ejecucion.txt"%(ruta_trabajo), "w")
-##                            text_file.write("%s \n"%(verPython64))
-##                            text_file.write("%s \n"%(script_clip))
-##                            text_file.write("%s \n"%(capax))
-##                            text_file.write("%s \n"%(moldex))
-##                            text_file.write("%s \n"%(rfinal.encode("utf8")))
-##                            text_file.write("%s \n"%(nombre_tabla.encode("utf8")))
-##                            text_file.close()
-                            comando=r"start %s %s %s %s %s %s"%(verPython64,script_clip,capax,moldex,rfinal.encode("utf8"),nombre_tabla.encode("utf8"))
-                            aa=subprocess.Popen(comando,stdin=None,stdout=subprocess.PIPE,shell=True,env=dict(os.environ, PYTHONHOME=verPythonDir))
-                            astdout, astderr = aa.communicate()
+                            arcpy.arcpy.Clip_analysis(in_features=capax, clip_features=moldex, out_feature_class=rfinal.encode("utf8")+"\\"+nombre_tabla.encode("utf8"))
                             arcpy.MakeFeatureLayer_management(rfinal+"\\"+nombre_tabla,nombre_tabla+"_"+molde.name)
 
 
@@ -724,18 +713,7 @@ class ButtonMulticortes(object):
                             moldex=arcpy.Describe(molde).catalogpath.encode("utf8")
                             capax=arcpy.Describe(capa).catalogpath.encode("utf8")
                             print moldex,capax,rfinal.encode("utf8"),nombre_tabla.encode("utf8")
-                            comando=r"start %s %s %s %s %s %s %s"%(verPython64,script_identity,moldex,capax,"ALL",rfinal.encode("utf8"),nombre_tabla.encode("utf8"))
-##                            ruta_trabajo= r"X:\BORRAR"
-##                            text_file = open("%s//Log_ejecucion.txt"%(ruta_trabajo), "w")
-##                            text_file.write("%s \n"%(verPython64))
-##                            text_file.write("%s \n"%(script_identity))
-##                            text_file.write("%s \n"%(capax))
-##                            text_file.write("%s \n"%(moldex))
-##                            text_file.write("%s \n"%(rfinal.encode("utf8")))
-##                            text_file.write("%s \n"%(nombre_tabla.encode("utf8")))
-##                            text_file.close()
-                            ff=subprocess.Popen(comando,stdin=None,stdout=subprocess.PIPE,shell=True,env=dict(os.environ, PYTHONHOME=verPythonDir))
-                            astdout, astderr = ff.communicate()
+                            arcpy.Identity_analysis(in_features=moldex,identity_features=capax, out_feature_class=rfinal.encode("utf8")+"\\"+nombre_tabla.encode("utf8"),join_attributes="ALL")
                             arcpy.MakeFeatureLayer_management(rfinal+"\\"+nombre_tabla,nombre_tabla+"_"+molde.name)
                     else:
                         valor_extraccion=[row[0] for row in arcpy.da.SearchCursor(molde, campo_extraccion)][0]
