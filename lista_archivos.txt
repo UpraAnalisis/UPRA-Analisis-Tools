@@ -1,2 +1,2 @@
-Multicortes_x32.esriaddin
+UPRA-Analisis-Tools.esriaddin
 fillable_box.py
