@@ -11,6 +11,9 @@ import locale
 import shutil
 import xlsxwriter
 import easygui
+from tkFileDialog import askopenfilename
+from tkFileDialog import asksaveasfilename
+from tkFileDialog import askdirectory
 import pptx
 import pptx.util
 import glob
@@ -342,9 +345,19 @@ class GetUserInput(object):
 
 def mExport():
     import pythonaddins, time
-    orgin= r'' + easygui.fileopenbox("Plantilla","Open File",".pptx",["*.pptx", ["*.ppt", "*.pptx", "PowerPoint Files"]  ])
-    out= r'' + easygui.filesavebox("Resultado","Save File","out.pptx",["*.pptx", ["*.ppt", "*.pptx", "PowerPoint Files"]  ])
-    PNGPath = r'' + easygui.diropenbox("Save Folder","Imagenes Generadas",".")
+
+    try:
+        orgin= r'' + easygui.fileopenbox("Plantilla","Abrir archivo",".pptx",["*.pptx", ["*.ppt", "*.pptx", "Archivo de PowerPoint"]  ])
+    except:
+        orgin= r'' + askopenfilename(title="Seleccione un archivo",initialdir="C:",filetypes=[("Powerpoint",("*.ppt","*.pptx"))])
+    try:
+        out= r'' + easygui.filesavebox("Nombre el archivo","Guardar","out.pptx",["*.pptx", ["*.ppt", "*.pptx", "PowerPoint Files"]  ])
+    except:
+        out= r''+ asksaveasfilename(title="Nombre el archivo",initialdir="C:",initialfile="out.pptx",filetypes=[("Powerpoint",("*.ppt","*.pptx"))])
+    try:
+        PNGPath = r'' + easygui.diropenbox("Save Folder","Imagenes Generadas",".")
+    except:
+        PNGPath =r'' + askdirectory (title="Carpeta de almacenamiento",initialdir=".")
     formatoSalida =  easygui.choicebox("Seleccione formato de Salida","Formato",["PNG","JPG","PDF"])
     resolucionSalida = easygui.integerbox('Resolución 150 - 600 px',' Resolución Salida',300,150,601)
     t_inicio=time.clock()
