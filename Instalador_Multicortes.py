@@ -35,12 +35,7 @@ try:
     ruta = os.getcwd() + os.sep
     ruta_lectura=directorio+"\\lista_archivos.txt"
     home =os.path.expanduser("~")
-    ruta_copia=home+"\\"+"Documents\ArcGIS\AddIns\Desktop"+str(arcpy.GetInstallInfo()['Version'])
-
-
-
-
-
+    ruta_copia=home+"\\"+"Documents\ArcGIS\AddIns\Desktop"+str(arcpy.GetInstallInfo()['Version'])[:4]
     txt= open(ruta_lectura,"r")
     archivos =txt.readlines()
 

@@ -26,10 +26,12 @@ from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN
 from pptx.enum.shapes import MSO_SHAPE
 from pptx.enum.lang import MSO_LANGUAGE_ID
-arcpy.env.outputCoordinateSystem = arcpy.SpatialReference("MAGNA Colombia Bogota")
 
 import Tkinter, Tkconstants, tkFileDialog
 from Tkinter import *
+
+reload(sys) # cargue la codificación utf8
+sys.setdefaultencoding('UTF8')
 
 if not hasattr(sys, 'argv'):
     sys.argv = ['']
@@ -72,7 +74,7 @@ verPythonDir_32 =verPythonDir
 ArcVersion=verPythonDir_32.replace("C:\Python27\ArcGIS","")
 ##archivo, directorio = directorioyArchivo()
 home =os.path.expanduser("~")
-directorio=home+"\\"+"Documents\ArcGIS\AddIns\Desktop"+str(arcpy.GetInstallInfo()['Version'])
+directorio=home+"\\"+"Documents\ArcGIS\AddIns\Desktop"+str(arcpy.GetInstallInfo()['Version'])[:4]
 directorio_raiz = directorio
 script_clip=directorio+"\\clipx64_aux.py"
 script_identity=directorio+"\\identityx64_aux.py"
@@ -176,6 +178,7 @@ def grafica(f):
                 a1 = int(s.cell_value(rowx=i, colx=1))
                 worksheet.write(i, 6, values[a1])
                 worksheet.insert_chart('H1', chart)
+                del chart
             except:
                 continue
     workbook.close()
@@ -671,7 +674,6 @@ class ButtonMulticortes(object):
             ejecucion=easygui.ynbox('¿Desea Continuar con la Ejecución?', 'Seguir?', ('Sí', 'No'))
 ################################## MENU DE EJECUCION ##########################################################################
         if ejecucion:
-            arcpy.env.outputCoordinateSystem = arcpy.SpatialReference(3116)
             doc=arcpy.mapping.MapDocument("CURRENT")
             df_molde=arcpy.mapping.ListDataFrames(doc,"*molde")
             df_capas=arcpy.mapping.ListDataFrames(doc,"*capas")
