@@ -842,44 +842,6 @@ class ButtonMulticortes(object):
         else:
             pass # Fin de la ejecución el usuario finalizó la ejecución.
 
-def multiQuery():
-    expresion = easygui.textbox(msg="Escriba el query",title="Definicion de Query")
-    mxd = arcpy.mapping.MapDocument("CURRENT")
-    layers = pythonaddins.GetSelectedTOCLayerOrDataFrame()
-    if len(layers) >1:
-        for lyr in layers:
-            lyr.definitionQuery = expresion
-    elif len(layers) ==1:
-        layers.definitionQuery = expresion
-    else:
-        print "######### SELECCIONE UN LAYER EN EL DATAFRAME ACTIVO"########
-    arcpy.RefreshActiveView
-    arcpy.RefreshTOC()
-
-def multiExport():
-    formatoSalida =  easygui.choicebox("Seleccione formato de Salida","Formato",["FeatureClass","Tabla"])
-    try:
-        ruta_salida = r'' + easygui.diropenbox("Caperta/GDB de Salida","Archivos de Salida",".")
-    except:
-        ruta_salida =r'' + askdirectory (title="Caperta/GDB de Salida",initialdir=".")
-    lista_capas = pythonaddins.GetSelectedTOCLayerOrDataFrame()
-    if lista_capas is not None and lista_capas != []:
-        if type(lista_capas)!= list:
-            arr =[]
-            arr.append(lista_capas)
-            lista_capas=arr
-            for capa in lista_capas:
-                if formatoSalida =="FeatureClass":
-                    arcpy.FeatureClassToFeatureClass_conversion(capa,ruta_salida,capa.name)
-                else:
-                    arcpy.CopyRows_management(capa,os.path.join(ruta_salida,capa.name))
-        else:
-            for capa in lista_capas:
-                if formatoSalida =="FeatureClass":
-                    arcpy.FeatureClassToFeatureClass_conversion(capa,ruta_salida,capa.name)
-                else:
-                    arcpy.CopyRows_management(capa,os.path.join(ruta_salida,capa.name))
-
 class ButtonRuta(object):
     """Implementation for UpraToolBar_Ruta.button (Button)"""
     def __init__(self):
@@ -924,47 +886,4 @@ class ButtonHelp(object):
         self.checked = False
     def onClick(self):
         global subprocess
-        subprocess.Popen("start chrome /new-tab https://github.com/UpraAnalisis/UPRA-Analisis-Tools#upra-analisis-tools",shell = True)
-
-class ButtonMultiExport(object):
-    """Implementation for UpraToolBar_MultiExport.button (Button)"""
-    def __init__(self):
-        self.enabled = True
-        self.checked = False
-    def onClick(self):
-        capas=pythonaddins.GetSelectedTOCLayerOrDataFrame()
-        if capas is not None:
-            if type(capas)!= list:
-                arr =[]
-                arr.append(capas)
-                capas=arr
-                multiExport()
-            else:
-                if len(capas)>=1:
-                     multiExport()
-                else:
-                    print "###### Seleccione por lo menos una capa en el dataframe activo ######"
-        else:
-            print "###### Seleccione por lo menos una capa en el dataframe activo ######"
-        del capas
-
-class ButtonMultiQuery(object):
-    """Implementation for Multicortes_MultiQuery.button (Button)"""
-    def __init__(self):
-        self.enabled = True
-        self.checked = False
-    def onClick(self):
-        capas=pythonaddins.GetSelectedTOCLayerOrDataFrame()
-        if capas is not None:
-            if type(capas)!= list:
-                arr =[]
-                arr.append(capas)
-                capas=arr
-                multiQuery()
-            else:
-                if len(capas)>=1:
-                     multiQuery()
-                else:
-                    print "###### Seleccione por lo menos una capa en el dataframe activo ######"
-        else:
-            print "###### Seleccione por lo menos una capa en el dataframe activo ######"
+        subprocess.Popen("start chrome /new-tab https://github.com/UpraAnalisis/UPRA-Analisis-Tools_x64#upra-analisis-tools-x64",shell = True)
