@@ -30,3 +30,8 @@ se arregló el inconveniente de la ventana de almacenamiento en folder(versión se
 
 ##----------22/08/2017--------------------------------
 se agregaron nuevas funcionalidades,en un menú adicional
+
+##----------09/04/2018--------------------------------
+Se añadela funcionalidad de exportar las capas seleccionadas como tabla y como capa. 
+Adicionalmente, se incorpora el soporte a caracteres especiales y un acceso directo a la página de ayuda en github.
+Se retira la variable de entorno que fijaba el sistema de coordenadas a epsg 3116
