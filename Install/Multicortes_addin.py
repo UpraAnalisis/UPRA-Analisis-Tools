@@ -55,13 +55,6 @@ def directorioyArchivo ():
 #=========Validación de requerimientos=====================#
 
 pyexe = getPythonPath()
-
-##if not "x64" in r"%s"%(pyexe):
-##    pyexe=pyexe.replace("ArcGISx64","ArcGIS")
-##if not arcpy.Exists(pyexe):
-##    arcpy.AddError("Usted no tiene instalado el Geoprocesamiento en segundo plano (64 bits)")
-##    raise RuntimeError("Usted no tiene instalado el Geoprocesamiento en segundo plano (64 bits) {0}".format(pyexe))
-##else:
 verPython64=pyexe
 verPythonfinal=verPython64
 # ------------------------------------------------------------
@@ -843,7 +836,7 @@ class ButtonMulticortes(object):
             pass # Fin de la ejecución el usuario finalizó la ejecución.
 
 def multiQuery():
-    expresion = easygui.textbox(msg="Escriba el query",title="Definicion de Query")
+    expresion = easygui.textbox(msg="Escriba el query",title="Definición de Query")
     mxd = arcpy.mapping.MapDocument("CURRENT")
     layers = pythonaddins.GetSelectedTOCLayerOrDataFrame()
     if len(layers) >1:
@@ -924,7 +917,7 @@ class ButtonHelp(object):
         self.checked = False
     def onClick(self):
         global subprocess
-        subprocess.Popen("start chrome /new-tab https://github.com/UpraAnalisis/UPRA-Analisis-Tools#upra-analisis-tools",shell = True)
+        subprocess.Popen("start chrome /new-tab https://github.com/UpraAnalisis/UPRA-Analisis-Tools",shell = True)
 
 class ButtonMultiExport(object):
     """Implementation for UpraToolBar_MultiExport.button (Button)"""
