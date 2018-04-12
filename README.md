@@ -22,12 +22,12 @@ Antes de instalar el Add-in Upra_Analisis_Tools verifique lo siguiente:
 
 El proceso de descarga e instalación es el siguiente:
 
-### Descargar del AddIn:
+### Descarga del Add-In:
 
 Para descargar el Add-in haga clic en el link de **Download ZIP** tal como lo muestra la siguiente imagen.
 
 <p align="center">
-  <img src="Images\Descarga.PNG">
+  <img src="..\Images\Descarga.PNG">
 </p>
 
 La instalación puede realizarse de dos formas:
@@ -88,7 +88,7 @@ La forma automatizada consiste en ejecutar el instalador que viene por defecto e
 
 ## Uso
 
-La barra de herramientas del Add-in Upra Análisis Tools x64 se compone de dos grupos de funcionalidades: **Herramientas para presentaciones** y **Herramientas para manipular layers**.
+La barra de herramientas del Add-in Upra Análisis Tools se compone de dos grupos de funcionalidades: **Herramientas para presentaciones** y **Herramientas para manipular layers**.
 
 <p align="center">
  <img src="Images\barra_de_herramientas.png">
@@ -98,17 +98,17 @@ La barra de herramientas del Add-in Upra Análisis Tools x64 se compone de dos g
 Herramientas que preparan de forma masiva los insumos para construir presentaciones con la información resultante de los geoprocesos.
 
 
-+ #### Multicortes [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools_x64/blob/master/help/Multicortes.md#multicortes-)
-+ #### ToPowerpoint [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools_x64/blob/master/help/to_powerpoint.md#to_powerpoint-)
++ #### Multicortes [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools/blob/master/help/Multicortes.md#multicortes-)
++ #### ToPowerpoint [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools/blob/master/help/to_powerpoint.md#to_powerpoint-)
 
 
 ### Herramientas para manipular layers
 Herramientas que permiten consultar, filtrar y exportar de forma masiva las capas y tablas cargadas en un mxd.
 
-+ #### Área [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools_x64/blob/master/help/Herramientas_layers.md#%C3%81rea)
-+ #### Ruta [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools_x64/blob/master/help/Herramientas_layers.md#ruta)
-+ #### Coordenadas [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools_x64/blob/master/help/Herramientas_layers.md#coordenadas)
-+ #### Estadísticas [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools_x64/blob/master/help/Herramientas_layers.md#estad%C3%ADsticas)
-+ #### Tabla a Excel [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools_x64/blob/master/help/Herramientas_layers.md#tabla-a-excel)
-+ #### Multi Query [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools_x64/blob/master/help/Herramientas_layers.md#multi-query)
-+ #### Multi Export [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools_x64/blob/master/help/Herramientas_layers.md#multi-export)
++ #### Área [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools/blob/master/help/Herramientas_layers.md#%C3%81rea)
++ #### Ruta [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools/blob/master/help/Herramientas_layers.md#ruta)
++ #### Coordenadas [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools/blob/master/help/Herramientas_layers.md#coordenadas)
++ #### Estadísticas [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools/blob/master/help/Herramientas_layers.md#estad%C3%ADsticas)
++ #### Tabla a Excel [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools/blob/master/help/Herramientas_layers.md#tabla-a-excel)
++ #### Multi Query [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools/blob/master/help/Herramientas_layers.md#multi-query)
++ #### Multi Export [(Ver ayuda)](https://github.com/UpraAnalisis/UPRA-Analisis-Tools/blob/master/help/Herramientas_layers.md#multi-export)
