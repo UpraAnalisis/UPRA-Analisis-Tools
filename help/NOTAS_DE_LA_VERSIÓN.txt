@@ -1,0 +1,43 @@
+El script realiza el corte por medio de un clip o un identity de multiples capas 
+teniendo en cuenta unas capas de molde del recorte y unas capas a cortar
+
+##----------15/02/2017--------------------------------
+Se añadió la opción de seleccionar el tipo de análisis 
+Entre solo corte y corte y estadísticas
+
+
+##----------15/02/2017--------------------------------
+Se realizaron unas correcciones en el menú de tipo de corte 
+y en el try de campo optativo
+
+##----------29/02/2017--------------------------------
+Se añadió la opción de realizar cortes empleando los algoritmos de 64 bits
+se corrigierón inconvenientes en la selección de opciones
+se añadió una ventana que permite cancelar el proceso una vez se configuren los parámetros
+
+##----------30/03/2017--------------------------------
+
+Se realizá mejora en terminos de commpatibilidad reemplazando tkinter por esasygui.
+
+
+##----------09/08/2017--------------------------------
+Las rutas de los scripts y archivos auxiliares ahora son dinámicas
+
+
+##----------11/08/2017--------------------------------
+se arregló el inconveniente de la ventana de almacenamiento en folder(versión semana de geomática)
+
+
+##----------22/08/2017--------------------------------
+se agregaron nuevas funcionalidades,en un menú adicional
+
+##----------09/02/2018--------------------------------
+se arreglaron los invonvenientes con las ventanas y arcgis 10.5
+
+##----------14/02/2018--------------------------------
+se solucionaron los problemas de localización del python de 64 en arcgis 10.5.1
+
+##----------09/04/2018--------------------------------
+Se añadela funcionalidad de exportar las capas seleccionadas como tabla y como capa. 
+Adicionalmente, se incorpora el soporte a caracteres especiales y un acceso directo a la página de ayuda en github.
+Se retira la variable de entorno que fijaba el sistema de coordenadas a epsg 3116
