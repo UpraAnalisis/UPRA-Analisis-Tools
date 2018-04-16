@@ -27,7 +27,7 @@ El proceso de descarga e instalación es el siguiente:
 Para descargar el Add-in haga clic en el link de **Download ZIP** tal como lo muestra la siguiente imagen.
 
 <p align="center">
-  <img src="Images\Descarga.PNG">
+  <img src="Images\Descarga.png">
 </p>
 
 La instalación puede realizarse de dos formas:
