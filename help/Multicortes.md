@@ -26,7 +26,7 @@ La funcionalidad de Multicortes permite realizar el corte y las estadísticas de
 Para emplear esta funcionalidad es necesario crear tres dataframes, dos deben llevar de forma obligatoria los nombres : **moldes** y **capas** respectivamente y el tercero puede tener cualquier nombre. A continuación una imagen que ilustra lo descrito.
 
 <p align="center">
- <img src="/img/dataframes.PNG">
+ <img src="..\img\dataframes.PNG">
 </p>
 
 Tenga en cuenta:
@@ -55,7 +55,7 @@ Si se desea obtener estadísticas a partir de las capas, deben configurarse para
 
 
 <p align="center">
- <img src="/img/confi_nombres.png">
+ <img src="..\img\confi_nombres.png">
 </p>
 
 
