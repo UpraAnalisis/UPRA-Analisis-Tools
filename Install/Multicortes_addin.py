@@ -917,7 +917,7 @@ class ButtonHelp(object):
         self.checked = False
     def onClick(self):
         global subprocess
-        subprocess.Popen("start chrome /new-tab https://github.com/UpraAnalisis/UPRA-Analisis-Tools",shell = True)
+        subprocess.Popen("start chrome /new-tab https://github.com/UpraAnalisis/UPRA-Analisis-Tools#herramientas-para-presentaciones",shell = True)
 
 class ButtonMultiExport(object):
     """Implementation for UpraToolBar_MultiExport.button (Button)"""
