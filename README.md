@@ -11,6 +11,8 @@ Es una funcionalidad del tipo Add-in (o extensión) que se incorpora a ArcGIS y 
 
 Antes de instalar el Add-in Upra_Analisis_Tools verifique lo siguiente:
 
++ Que tenga instalada una versión de Arcgis Desktop 10.3 o superior.
+
 + Que tenga permisos de escritura sobre la carpeta de Python en su pc. Para habilitar los permisos de escritura diríjase a la unidad C: de su pc,  haga clic derecho sobre la carpeta Python27 y seleccione propiedades. Una ventana como la mostrada a continuación aparecerá. Cerciórese de que el botón de solo lectura este no esté seleccionado.
 
 <p align="center">

@@ -23,7 +23,7 @@ La funcionalidad de Multicortes permite realizar el corte y las estadísticas de
 
 ## Configurar el mxd
 
-Para emplear esta funcionalidad es necesario crear tres dataframes, dos deben llevar de forma obligatoria los nombres : **moldes** y **capas** respectivamente y el tercero puede tener cualquier nombre. A continuación una imagen que ilustra lo descrito.
+Para emplear esta funcionalidad es necesario crear tres dataframes, dos deben llevar de forma obligatoria los nombres : **molde** y **capas** respectivamente y el tercero puede tener cualquier nombre. A continuación una imagen que ilustra lo descrito.
 
 <p align="center">
  <img src="..\img\dataframes.PNG">
